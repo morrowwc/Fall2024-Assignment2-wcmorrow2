@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super AIgorithm Ultra AI Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <script type="text/javascript" src="./script.js"></script>
+    <header>
+        <h1>Super AIgorithm Ultra AI Search</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="query" placeholder="Enter your search query here">
+            <button onclick="apiSearch()">Search</button>
+            <button onclick="displayTime()">Show Current Time</button>
+        </div>
+        <div id="searchResults"></div>
+        <div id="time"></div>
+    </main>
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -7,10 +7,10 @@ function apiSearch() {
     };
 
     $.ajax({
-        url: 'https://MY-API-ENDPOINT/v7.0/search?' + $.param(params),
+        url: CONFIG.API_ENDPOINT + '?' + $.param(params),
         type: 'GET',
         headers: {
-            'Ocp-Apim-Subscription-Key': 'MY-API-KEY'
+            'Ocp-Apim-Subscription-Key': CONFIG.API_KEY
         }
     })
         .done(function (data) {
@@ -26,4 +26,8 @@ function apiSearch() {
         .fail(function () {
             alert('error');
         });
+}
+function displayTime() {
+    const now = new Date();
+    document.getElementById('time').innerText = `Current time is: ${now.toLocaleTimeString()}`;
 }
