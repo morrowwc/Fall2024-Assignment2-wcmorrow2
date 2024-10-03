@@ -1,4 +1,6 @@
-function apiSearch() {
+import CONFIG from './config.js';
+
+export function apiSearch() {
     var params = {
         'q': $('#query').val(),
         'count': 50,
@@ -27,7 +29,11 @@ function apiSearch() {
             alert('error');
         });
 }
-function displayTime() {
+export function displayTime() {
     const now = new Date();
     document.getElementById('time').innerText = `Current time is: ${now.toLocaleTimeString()}`;
 }
+
+// Attach to the global window object
+window.apiSearch = apiSearch;
+window.displayTime = displayTime;
