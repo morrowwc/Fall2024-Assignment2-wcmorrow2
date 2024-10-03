@@ -1,14 +1,15 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background-image: url('../assets/backsplash.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Add this line */
     margin: 0;
     padding: 0;
     background-color: #333;
 }
+
 
 header {
     background-color: rgba(255, 255, 255, 0.8);
@@ -20,6 +21,11 @@ header {
 h1 {
     margin: 0;
     font-size: 2.5em;
+    color: #007BFF;
+}
+h2 {
+    margin: 0;
+    font-size: 1em;
     color: #007BFF;
 }
 
@@ -69,7 +75,14 @@ button {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 79%;
     max-width: 1600px;
     text-align: center;
 }
+
+.results-container {
+    flex-grow: 1;
+}
+    .results-container p {
+        text-align: left;
+    }

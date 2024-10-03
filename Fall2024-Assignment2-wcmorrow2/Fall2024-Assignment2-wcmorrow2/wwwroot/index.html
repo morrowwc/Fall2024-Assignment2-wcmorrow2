@@ -6,12 +6,15 @@
     <title>Super AIgorithm Ultra AI Search</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <script type="module" src="js/script.js"></script>
 
 </head>
 <body>
     <header>
         <h1>Super AIgorithm Ultra AI Search</h1>
+        <h2>Better than Google for sure</h2>
     </header>
     <main>
         <div class="search-container">
@@ -19,8 +22,8 @@
             <button onclick="apiSearch()">Search</button>
             <button onclick="displayTime()">Show Current Time</button>
         </div>
-        <div id="searchResults"></div>
-        <div id="time"></div>
+        <div id="searchResults" class="results-container" hidden="hidden"></div>
+        <div id="time" hidden="hidden"></div>
     </main>
 </body>
 </html>

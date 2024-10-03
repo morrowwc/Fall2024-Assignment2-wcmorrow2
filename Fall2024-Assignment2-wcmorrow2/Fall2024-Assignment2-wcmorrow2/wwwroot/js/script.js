@@ -18,9 +18,10 @@ export function apiSearch() {
         .done(function (data) {
             var len = data.webPages.value.length;
             var results = '';
-            for (i = 0; i < len; i++) {
+            for (var i = 0; i < len; i++) {
                 results += `<p><a href="${data.webPages.value[i].url}">${data.webPages.value[i].name}</a>: ${data.webPages.value[i].snippet}</p>`;
             }
+            $('#searchResults').show();
 
             $('#searchResults').html(results);
             $('#searchResults').dialog();
@@ -32,6 +33,8 @@ export function apiSearch() {
 export function displayTime() {
     const now = new Date();
     document.getElementById('time').innerText = `Current time is: ${now.toLocaleTimeString()}`;
+    $('#time').show();
+
 }
 
 // Attach to the global window object
