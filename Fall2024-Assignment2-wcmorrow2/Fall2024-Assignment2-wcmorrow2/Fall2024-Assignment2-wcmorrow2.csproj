@@ -8,4 +8,8 @@
     <UserSecretsId>9ea67a07-404a-4f5a-a30d-20c3815b21f7</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\config.js" />
+  </ItemGroup>
+
 </Project>

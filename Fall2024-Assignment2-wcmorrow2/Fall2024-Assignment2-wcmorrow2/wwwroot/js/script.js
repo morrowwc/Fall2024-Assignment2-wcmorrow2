@@ -24,19 +24,66 @@ export function apiSearch() {
             $('#searchResults').show();
 
             $('#searchResults').html(results);
-            $('#searchResults').dialog();
         })
         .fail(function () {
             alert('error');
         });
 }
+export function imfeelinglucky() {
+    var params = {
+        'q': $('#query').val(),
+        'count': 50,
+        'offset': 0,
+        'mkt': 'en-us'
+    };
+
+    $.ajax({
+        url: CONFIG.API_ENDPOINT + '?' + $.param(params),
+        type: 'GET',
+        headers: {
+            'Ocp-Apim-Subscription-Key': CONFIG.API_KEY
+        }
+    })
+        .done(function (data) {
+            if (data.webPages && data.webPages.value.length > 0) {
+                // Redirect to the first search result URL
+                window.location.href = data.webPages.value[0].url;
+            } else {
+                alert('No results found');
+            }
+        })
+        .fail(function () {
+            alert('error');
+        });
+}
+
 export function displayTime() {
     const now = new Date();
     document.getElementById('time').innerText = `Current time is: ${now.toLocaleTimeString()}`;
     $('#time').show();
+    $('#time').dialog();
 
 }
+export function changeBackground() {
+    var images = ['backsplash1.jpg', 'backsplash2.jpg', 'backsplash3.jpg', 'backsplash4.jpg'];
+    var imagesAvailible = [];
+    images.forEach((image) => {
+        if (image != document.body.style.backgroundImage.slice(15, -2)){
+            imagesAvailible.push(image);
+        }
+    });
+    console.log(document.body.style.backgroundImage.slice(15, -2));
+    console.log(imagesAvailible.length);
+    
+    // Select a random image
+    const randomImage = images[Math.floor(Math.random() * imagesAvailible.length)];
+    // Set the background image of the body
+    document.body.style.backgroundImage = `url('../assets/${randomImage}')`;
+}
+
 
 // Attach to the global window object
 window.apiSearch = apiSearch;
+window.imfeelinglucky = imfeelinglucky;
 window.displayTime = displayTime;
+window.changeBackground = changeBackground;
