@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super AIgorithm Ultra AI Search</title>
+
+
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js" integrity="sha384-oVpH0DXO9nadZxTmPSQo3YwWqfN/Up9aRDHCxLrw8A2LjkFNcM/XILw4KGMaL95z" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/ui-lightness/jquery-ui.css" integrity="sha384-IKSEBLH0K+LaiWIPEdsTnWpXzpCjXC6zkczZLDSnV9kwMc0anbuRTiCZZ1Ya9r+R" crossorigin="anonymous">
     <script type="module" src="js/script.js"></script>
 
 </head>
 <body>
     <header>
-        <h1>Super AIgorithm Ultra AI Search</h1>
+        <h1 onclick="changeBackground()">Super AIgorithm Ultra AI Search</h1>
         <h2>Better than Google for sure</h2>
     </header>
     <main>
+
         <div class="search-container">
-            <input type="text" id="query" placeholder="Enter your search query here">
-            <button onclick="apiSearch()">Search</button>
-            <button onclick="displayTime()">Show Current Time</button>
+
+            <input type="text" id="query" placeholder="Search...">
+            <button class="ui-button" onclick="apiSearch()">Search</button>
+            <button class="ui-button" onclick="imfeelinglucky()">I'm Feeling Lucky</button>
+            <button class="ui-button" onclick="displayTime()">Show Current Time</button>
         </div>
         <div id="searchResults" class="results-container" hidden="hidden"></div>
         <div id="time" hidden="hidden"></div>

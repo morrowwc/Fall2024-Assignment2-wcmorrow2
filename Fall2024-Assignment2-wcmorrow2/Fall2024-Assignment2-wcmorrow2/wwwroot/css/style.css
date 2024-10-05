@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../assets/backsplash.jpg');
+    background-image: url('../assets/backsplash1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,22 +52,6 @@ input[type="text"] {
     font-size: 1em;
     flex: 1;
 }
-
-button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-    button:hover {
-        background-color: #0056b3;
-    }
 
 #searchResults, #time {
     margin-top: 20px;
